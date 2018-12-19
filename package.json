@@ -1,0 +1,23 @@
+{
+  "name": "similar_listings",
+  "version": "1.0.0",
+  "description": "FlairBnB Similar Listings Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrnyc19-arcadia/KK-service.git"
+  },
+  "author": "Kevin Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrnyc19-arcadia/KK-service/issues"
+  },
+  "homepage": "https://github.com/hrnyc19-arcadia/KK-service#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0"
+  }
+}
