@@ -10,8 +10,8 @@ app.use(bodyParser.json());
 
 app.use(express.static('public'));
 
-app.get('/similar-listings/:id', (req, res) => {
-  let listingId = req.params.id;
+app.get('/similar-listings/:listingId', (req, res) => {
+  let listingId = req.params.listingId;
   db.findOne({listingId: listingId}).exec()
   .then((doc) => {
     if (!doc) {res.sendStatus(400)}
