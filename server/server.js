@@ -12,21 +12,25 @@ app.use(express.static('public'));
 
 app.get('/similar-listings/:listingId', (req, res) => {
   let listingId = req.params.listingId;
-  db.findOne({listingId: listingId}).exec()
-  .then((doc) => {
-    if (!doc) {res.sendStatus(400)}
-    else {
-      res.send(doc);
-    }
-  })
-  .catch(() => {
-    res.sendStatus(500);
-  })
-})
+  db.findOne({ listingId: listingId })
+    .exec()
+    .then((doc) => {
+      if (!doc) {
+        res.sendStatus(400);
+      } else {
+        res.send(doc);
+      }
+    })
+    .catch(() => {
+      res.sendStatus(500);
+    });
+});
 
 let port = 3003;
 
 app.listen(port, (err) => {
-  if (err) { console.log(err) }
-  console.log('Server connected! Listening on http://localhost:' + port)
+  if (err) {
+    console.log(err);
+  }
+  console.log('Server connected! Listening on http://localhost:' + port);
 });

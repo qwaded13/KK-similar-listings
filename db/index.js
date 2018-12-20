@@ -1,13 +1,16 @@
 let mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/similarlistings', { useNewUrlParser: true });
+mongoose.connect(
+  'mongodb://localhost/similarlistings',
+  { useNewUrlParser: true }
+);
 
 let db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-  console.log('Connected to DB!')
-})
+  console.log('Connected to DB!');
+});
 
 let Schema = mongoose.Schema;
 
@@ -27,7 +30,6 @@ let similarSchema = new Schema({
   numberOfReviews: Number,
   imageLink: String
 });
-
 
 let SimilarListing = mongoose.model('SimilarListing', similarSchema);
 

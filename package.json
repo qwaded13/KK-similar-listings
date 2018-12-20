@@ -4,7 +4,7 @@
   "description": "FlairBnB Similar Listings Component",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server/server.js"
   },
   "repository": {
@@ -20,7 +20,9 @@
   "dependencies": {
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
+    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
     "express": "^4.16.4",
+    "jest": "^23.6.0",
     "mongoose": "^5.4.0",
     "path": "^0.12.7",
     "webpack": "^4.28.0"

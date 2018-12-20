@@ -2,7 +2,7 @@ let fs = require('fs');
 let Promise = require('bluebird');
 
 let SimilarListing = require('./index');
-let listingData = require('../test_data/MOCK_DATA.json')
+let listingData = require('../test_data/MOCK_DATA.json');
 
 let listingId = 0;
 
@@ -11,20 +11,20 @@ let insertAllListings = function() {
     listing.listingId = listingId++;
     // listingRecord = new SimilarListing(listing);
     return SimilarListing.findOneAndUpdate(
-      {listingName: listing.listingName},
+      { listingName: listing.listingName },
       listing,
-      {upsert: true}
+      { upsert: true }
     );
-  })
+  });
 
   Promise.all(listingPromises)
-  .then(() => {
-    console.log("Successfully added all the listings to the DB :)")
-  })
-  .catch((err) => {
-    console.log("Something went wrong inserting into the DB :(")
-    console.log(err);
-  })
-}
+    .then(() => {
+      console.log('Successfully added all the listings to the DB :)');
+    })
+    .catch((err) => {
+      console.log('Something went wrong inserting into the DB :(');
+      console.log(err);
+    });
+};
 
 insertAllListings();
