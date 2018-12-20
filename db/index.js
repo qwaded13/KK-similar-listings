@@ -1,24 +1,34 @@
 let mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/similar');
+mongoose.connect('mongodb://localhost/similarlistings');
 
 let db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+  console.log('Connected to DB!')
+})
 
 let Schema = mongoose.Schema;
 
 let similarSchema = new Schema({
-  style: String,
-  beds: Number,
-  name: {
+  listingName: {
     type: String,
     unique: true
   },
+  listingId: {
+    type: Number,
+    unique: true
+  },
+  propertyType: String,
+  beds: Number,
   price: Number,
   rating: Number,
+  numberOfReviews: Number,
   imageLink: String
 });
 
 
-let Similar = mongoose.model('Similar', similarSchema);
+let SimilarListing = mongoose.model('SimilarListing', similarSchema);
 
-module.exports = Similar;
+module.exports = SimilarListing;
