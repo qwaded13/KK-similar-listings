@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/hrnyc19-arcadia/KK-service#readme",
   "dependencies": {
+    "bluebird": "^3.5.3",
     "express": "^4.16.4",
-    "mongoose": "^5.4.0"
+    "mongoose": "^5.4.0",
+    "path": "^0.12.7",
+    "webpack": "^4.28.0"
   }
 }
