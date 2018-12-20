@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/similarlistings');
+mongoose.connect('mongodb://localhost/similarlistings', { useNewUrlParser: true });
 
 let db = mongoose.connection;
 
