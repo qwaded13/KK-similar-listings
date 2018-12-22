@@ -8,7 +8,7 @@ let app = express();
 
 app.use(bodyParser.json());
 
-app.use(express.static('public'));
+app.use(express.static(Path.join(__dirname, '../client/dist')));
 
 app.get('/similar-listings/:listingId', (req, res) => {
   let listingId = req.params.listingId;
