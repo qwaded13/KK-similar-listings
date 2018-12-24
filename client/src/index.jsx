@@ -32,9 +32,9 @@ class App extends React.Component {
       <div>
         This is a test
         {/* <ListingImg /> */}
-        {this.state.listings.map((listing) => {
+        {this.state.listings.length ? this.state.listings.map((listing) => {
           return <ListingDesc listing={listing}/>;
-        })}
+        }) : <div>Loading...</div>}
       </div>
     );
   }
