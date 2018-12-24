@@ -4,7 +4,7 @@ let Promise = require('bluebird');
 let SimilarListing = require('./index');
 let listingData = require('../test_data/MOCK_DATA.json');
 
-let listingId = 0;
+let listingId = 1;
 
 let insertAllListings = function() {
   let listingPromises = listingData.map((listing) => {
@@ -12,7 +12,7 @@ let insertAllListings = function() {
     // listingRecord = new SimilarListing(listing);
     return SimilarListing.findOneAndUpdate(
       { listingName: listing.listingName },
-      listing,
+      Object.assign(listing, {imageLink: 'https://i.pinimg.com/originals/5f/d9/78/5fd9786dc347122dfc4b7ceaed697a0a.jpg'}),
       { upsert: true }
     );
   });
