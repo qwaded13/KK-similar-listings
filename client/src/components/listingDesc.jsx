@@ -4,7 +4,6 @@ import axios from 'axios';
 class ListingDesc extends React.Component {
   constructor(props) {
     super(props);
-    
 
     // this.state = {
     //   imageLink:
@@ -20,17 +19,26 @@ class ListingDesc extends React.Component {
 
   // when the component mounts, make a request to the correct endpoint for a listing's data
 
-
   render() {
     return (
       <div>
-        <img className="listingImg" src={this.props.listing.imageLink} />
-        <div className="listingName">Listing Name: {this.props.listing.listingName}</div>
-        <div className="propertyType">Listing Type: {this.props.listing.propertyType}</div>
+        <img
+          className="listingImg"
+          style={{ 'height': 200, 'width': 300, 'borderRadius': '7px'}}
+          src={this.props.listing.imageLink}
+        />
+        <div className="listingName">
+          Listing Name: {this.props.listing.listingName}
+        </div>
+        <div className="propertyType">
+          Listing Type: {this.props.listing.propertyType}
+        </div>
         <div className="beds">Number of Beds: {this.props.listing.beds}</div>
         <div className="price">Daily Price: ${this.props.listing.price}</div>
         <div className="rating">Rating: {this.props.listing.rating}</div>
-        <div className="numberOfReviews">Number of Reviews: {this.props.listing.numberOfReviews}</div>
+        <div className="numberOfReviews">
+          Number of Reviews: {this.props.listing.numberOfReviews}
+        </div>
       </div>
     );
   }

@@ -12,7 +12,7 @@ let insertAllListings = function() {
     // listingRecord = new SimilarListing(listing);
     return SimilarListing.findOneAndUpdate(
       { listingName: listing.listingName },
-      Object.assign(listing, {imageLink: 'https://i.pinimg.com/originals/5f/d9/78/5fd9786dc347122dfc4b7ceaed697a0a.jpg'}),
+      Object.assign(listing, {imageLink: 'https://picsum.photos/300/200/?random'}),
       { upsert: true }
     );
   });

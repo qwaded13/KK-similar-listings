@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const Path = require('path');
 
 let db = require('../db/index');
+// let insertAllListings = require('../db/insertAllListings')
 
 let app = express();
 

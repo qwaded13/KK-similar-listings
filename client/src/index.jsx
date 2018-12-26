@@ -30,8 +30,6 @@ class App extends React.Component {
       });
   }
 
-  // when the component mounts, make a request to the correct endpoint for a listing's data
-
   render() {
     return (
       <div>
