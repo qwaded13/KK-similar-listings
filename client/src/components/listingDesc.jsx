@@ -7,7 +7,7 @@ class ListingDesc extends React.Component {
     
 
     // this.state = {
-    //   imageUrl:
+    //   imageLink:
     //     'https://i.pinimg.com/originals/5f/d9/78/5fd9786dc347122dfc4b7ceaed697a0a.jpg',
     //   listingName: 'Shack Reactor',
     //   propertyType: 'Restaurant/School lol',
@@ -23,14 +23,14 @@ class ListingDesc extends React.Component {
 
   render() {
     return (
-      <div key={this.props.listing.listingId}>
-        <img className="listingImg" src={this.props.listing.imageUrl} />
-        <div className="listingName">{this.props.listing.listingName}</div>
-        <div className="propertyType">{this.props.listing.propertyType}</div>
-        <div className="beds">{this.props.listing.beds}</div>
-        <div className="price">{this.props.listing.price}</div>
-        <div className="rating">{this.props.listing.rating}</div>
-        <div className="numberOfReviews">{this.props.listing.numberOfReviews}</div>
+      <div>
+        <img className="listingImg" src={this.props.listing.imageLink} />
+        <div className="listingName">Listing Name: {this.props.listing.listingName}</div>
+        <div className="propertyType">Listing Type: {this.props.listing.propertyType}</div>
+        <div className="beds">Number of Beds: {this.props.listing.beds}</div>
+        <div className="price">Daily Price: ${this.props.listing.price}</div>
+        <div className="rating">Rating: {this.props.listing.rating}</div>
+        <div className="numberOfReviews">Number of Reviews: {this.props.listing.numberOfReviews}</div>
       </div>
     );
   }
