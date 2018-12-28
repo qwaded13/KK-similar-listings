@@ -13,7 +13,8 @@ app.use(express.static(Path.join(__dirname, '../client/dist')));
 
 app.get('/similar-listings/:listingId', (req, res) => {
   let listingId = req.params.listingId;
-  db.findOne({ listingId: listingId })
+  db.find({})
+    .limit(4)
     .exec()
     .then((doc) => {
       if (!doc) {
