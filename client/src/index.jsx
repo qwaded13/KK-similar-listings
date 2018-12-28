@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import $ from 'jquery';
-import 'bootstrap';
 
 // Components
-import ListingImg from './components/listingImg.jsx';
 import ListingDesc from './components/listingDesc.jsx';
 
 class App extends React.Component {
@@ -22,7 +20,7 @@ class App extends React.Component {
       .get('/similar-listings/1')
       .then(({ data }) => {
         this.setState({
-          listings: [data]
+          listings: data
         });
       })
       .catch(() => {
@@ -33,10 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2 style={{ 'marginTop': '16px', 'marginBottom': '24px' }}>
-          Similar Listings
-        </h2>
-        {/* <ListingImg /> */}
+
         {this.state.listings.length ? (
           this.state.listings.map((listing) => {
             return <ListingDesc listing={listing} key={listing.listingId} />;
@@ -49,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+// ReactDOM.render(<App />, document.getElementById('app'));
