@@ -1,5 +1,16 @@
 
+$(document).ready(() => {
+  $('.multiple-items').slick({
+    autoplay: false,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true
+  });
+});
+  
 
+/* Native Bootstrap Carousel
 // Instantiate the Bootstrap carousel
 $('.multi-item-carousel').carousel({
   interval: false
@@ -31,3 +42,4 @@ $('.multi-item-carousel .item').each(function() {
       .appendTo($(this));
   }
 });
+*/
