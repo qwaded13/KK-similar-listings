@@ -13,23 +13,52 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="styles.css"/>
-  
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
   <!-- Slick CSS Files -->
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
-  
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
 </head>
 <body>
   <h1>Welcome to FlairBnB</h1>
   <div id="app"></div>
+  <h2 style="margin-top: 16px; margin-bottom: 24px">Similar Listings</h2>
   <div class="container-fluid">
-    <h2 style="margin-top: 16px; margin-bottom: 24px">Similar Listings</h2>
-    <div id="row" class="row">
-      
-    </div>
+    
+    <svg
+      class="slick-prev"
+      viewBox="0 0 18 18"
+      role="img"
+      aria-label="Previous"
+      focusable="false"
+      style="height: 24px; width: 24px; display: block; fill: rgb(118, 118, 118);"
+    >
+      <path
+        d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z"
+        fill-rule="evenodd"
+      ></path>
+    </svg>
+
+    <div id="carousel"></div>
+
+    <svg
+      class="slick-next"
+      viewBox="0 0 18 18"
+      role="img"
+      aria-label="Next"
+      focusable="false"
+      style="height: 24px; width: 24px; display: block; fill: rgb(118, 118, 118);"
+    >
+      <path
+        d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z"
+        fill-rule="evenodd"
+      ></path>
+    </svg>
   </div>
 
   <script src="bundle.js"></script>
