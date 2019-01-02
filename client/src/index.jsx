@@ -30,11 +30,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="multiple-items">
 
         {this.state.listings.length ? (
           this.state.listings.map((listing) => {
-            return <ListingDesc listing={listing} key={listing.listingId} />;
+            return <ListingDesc listing={listing} key={listing.listingId} className="listing" />;
           })
         ) : (
           <div>Loading...</div>
@@ -44,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-// ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('carousel'));
