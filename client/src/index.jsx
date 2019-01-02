@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="multiple-items">
 
         {this.state.listings.length ? (
           this.state.listings.map((listing) => {
@@ -44,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-// ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('row'));
