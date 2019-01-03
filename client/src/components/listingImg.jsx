@@ -6,7 +6,7 @@ class ListingImg extends React.Component {
       <div>
         <img
           className="listingImg"
-          style={{ height: 225, width: 325, borderRadius: '3px' }}
+          style={{ height: 225, width: 325, borderRadius: '5px' }}
           src={this.props.imageLink}
         />
         <button
