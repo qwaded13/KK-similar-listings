@@ -5,6 +5,7 @@ $(document).ready(() => {
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: $('.slick-prev'),
-    nextArrow: $('.slick-next')
+    nextArrow: $('.slick-next'),
+    variableWidth: false
   });
 });
