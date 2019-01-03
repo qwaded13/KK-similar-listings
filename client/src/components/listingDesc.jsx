@@ -24,7 +24,7 @@ class ListingDesc extends React.Component {
         <br />
         <span className="rating">
           <ListingRating rating={this.props.listing.rating} />
-          #{this.props.listing.numberOfReviews}
+          &nbsp;&nbsp;{this.props.listing.numberOfReviews}
         </span>
       </div>
     );
