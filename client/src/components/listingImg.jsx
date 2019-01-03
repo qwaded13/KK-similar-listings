@@ -5,7 +5,7 @@ class ListingImg extends React.Component {
     return (
       <img
           className="listingImg"
-          style={{ 'height': 200, 'width': 300, 'borderRadius': '7px'}}
+          style={{ 'height': 225, 'width': 325, 'borderRadius': '3px'}}
           src={this.props.imageLink}
         />
     );

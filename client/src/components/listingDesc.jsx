@@ -12,18 +12,12 @@ class ListingDesc extends React.Component {
     return (
       <div>
         <ListingImg imageLink={this.props.listing.imageLink} />
-        <div className="listingName">
-          Listing Name: {this.props.listing.listingName}
-        </div>
-        <div className="propertyType">
-          Listing Type: {this.props.listing.propertyType}
-        </div>
-        <div className="beds">Number of Beds: {this.props.listing.beds}</div>
-        <div className="price">Daily Price: ${this.props.listing.price}</div>
-        <div className="rating">Rating: {this.props.listing.rating}</div>
-        <div className="numberOfReviews">
-          Number of Reviews: {this.props.listing.numberOfReviews}
-        </div>
+        <span className="propertyType">{this.props.listing.propertyType.toUpperCase()} · {this.props.listing.beds} BEDS</span><br/>
+        <span className="listingName">
+          {this.props.listing.listingName}
+        </span><br/>
+        <span className="price">${this.props.listing.price} per night</span><br/>
+        <span className="rating">{this.props.listing.rating} * {this.props.listing.numberOfReviews}</span>
       </div>
     );
   }
