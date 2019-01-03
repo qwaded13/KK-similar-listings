@@ -9,10 +9,11 @@ let listingId = 1;
 let insertAllListings = function() {
   let listingPromises = listingData.map((listing) => {
     listing.listingId = listingId++;
-    // listingRecord = new SimilarListing(listing);
+    let imageId = Math.floor((Math.random() * 25) + 1);
+    listing.imageLink = `./test-images/test (${imageId}).jpg`;
     return SimilarListing.findOneAndUpdate(
       { listingName: listing.listingName },
-      Object.assign(listing, {imageLink: 'https://picsum.photos/300/200/?random'}),
+      listing,
       { upsert: true }
     );
   });
