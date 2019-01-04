@@ -28,7 +28,7 @@ app.get('/similar-listings/:listingId', (req, res) => {
     });
 });
 
-let port = process.env.PATH || 3003;
+let port = 3003;
 
 app.listen(port, (err) => {
   if (err) {
