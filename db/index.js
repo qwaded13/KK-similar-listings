@@ -1,7 +1,8 @@
 let mongoose = require('mongoose');
+let dbURL = 'mongodb://qwaded13:testpassword1@ds031882.mlab.com:31882/kk-fec-db'
 
 mongoose.connect(
-  'mongodb://localhost/similarlistings',
+  dbURL,
   { useNewUrlParser: true }
 );
 
