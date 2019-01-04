@@ -8,10 +8,10 @@ function getStars(rating) {
     output.push(<span className="fa fa-star" aria-hidden="true"></span>);
   }
     
-  if (i == .5) output.push(<i class="fa fa-star-half-o" aria-hidden="true"></i>);
+  if (i == .5) output.push(<i className="fa fa-star-half-o" aria-hidden="true"></i>);
 
   for (let i = (5 - rating); i >= 1; i--)
-    output.push(<i class="fa fa-star-o" aria-hidden="true"></i>);
+    output.push(<i className="fa fa-star-o" aria-hidden="true"></i>);
   
   return output;
 }

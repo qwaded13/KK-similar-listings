@@ -28,3 +28,11 @@ body {
   font-weight: 600;
   line-height: 1.3em;
 }
+
+.saveButton {
+  position: absolute;
+  display: inline-block;
+  background-color: transparent;
+  top: 0;
+  right: 24px;
+}
