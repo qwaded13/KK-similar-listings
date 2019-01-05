@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get('ec2-3-17-11-240.us-east-2.compute.amazonaws.com/similar-listings/1')
+      .get('http://ec2-3-17-11-240.us-east-2.compute.amazonaws.com/similar-listings/1')
       .then((data) => {
         this.setState({
           listings: data
