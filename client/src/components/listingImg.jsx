@@ -2,6 +2,7 @@ import React from 'react';
 
 class ListingImg extends React.Component {
   render() {
+    console.log(this.props.imageLink);
     return (
       <div>
         <img
