@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Path = require('path');
+const cors = require('cors');
 
 let db = require('../db/index');
 let insertAllListings = require('../db/insertAllListings')
@@ -8,6 +9,7 @@ let insertAllListings = require('../db/insertAllListings')
 let app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use(express.static(Path.join(__dirname, '../client/dist')));
 
