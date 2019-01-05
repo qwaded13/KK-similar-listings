@@ -9,7 +9,7 @@ let app = express();
 
 app.use(bodyParser.json());
 
-app.use(express.static(Path.join(__dirname, '../client/dist/bundle.js')));
+app.use(express.static(Path.join(__dirname, '../client/dist')));
 
 app.get('/similar-listings/:listingId', (req, res) => {
   let listingId = req.params.listingId;
