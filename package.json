@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "node server/server.js",
-    "dev-react": "webpack -d --watch"
+    "dev-react": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "jest": "^23.6.0",
     "jquery": "^3.3.1",
     "mongoose": "^5.4.0",
+    "morgan": "^1.9.1",
     "path": "^0.12.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
