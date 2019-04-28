@@ -8,7 +8,13 @@ class ListingImg extends React.Component {
         <img
           className="listingImg"
           style={{ height: 225, width: 325, borderRadius: '5px' }}
-          src={`/test-images/test(${this.props.imageId}).webp`}
+          src={
+            this.props.listingId % 2
+              ? `https://s3.us-east-2.amazonaws.com/similar-listings-home-images/test(${this
+                  .props.listingId % 26 || 1}).webp`
+              : `https://s3.us-east-2.amazonaws.com/similar-listings-home-images-alt/test(${this
+                  .props.listingId % 26 || 1}).webp`
+          }
         />
       </div>
     );
