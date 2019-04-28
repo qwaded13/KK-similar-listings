@@ -3,14 +3,16 @@ const bodyParser = require('body-parser');
 const Path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
+const compression = require('compression');
 
 let db = require('../db/index');
-let insertAllListings = require('../db/insertAllListings');
+// let insertAllListings = require('../db/insertAllListings');
 
 let app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(compression());
 app.use(morgan('dev'));
 
 app.use(express.static(Path.join(__dirname, '../client/dist')));
