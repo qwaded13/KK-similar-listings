@@ -23,12 +23,12 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015']
-        },
-      },
-    ],
+        }
+      }
+    ]
   },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   }
 };

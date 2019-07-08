@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const Path = require('path');
+const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
 const compression = require('compression');
@@ -15,7 +15,10 @@ app.use(cors());
 app.use(compression());
 app.use(morgan('dev'));
 
-app.use(express.static(Path.join(__dirname, '../client/dist')));
+app.use('/:id(\\d+)', express.static(path.join(__dirname, '../client/dist')));
+
+// without the ID endpoint
+// app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/similar-listings/:listingId', (req, res) => {
   let listingId = req.params.listingId;

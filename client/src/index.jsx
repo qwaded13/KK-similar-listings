@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get(`/similar-listings/7`)
+      .get(`/similar-listings${window.location.pathname}`)
       .then(({data}) => {
         this.setState({
           listings: data
