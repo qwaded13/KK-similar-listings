@@ -32,6 +32,7 @@ class App extends React.Component {
 
   render() {
     let settings = {
+      className: 'container',
       autoplay: false,
       infinite: false,
       slidesToShow: 3,
@@ -39,14 +40,38 @@ class App extends React.Component {
       prevArrow: <PrevArrow />,
       nextArrow: <NextArrow />,
       variableWidth: false,
-      rows: 1
+      lazyLoad: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            variableWidth: true,
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            variableWidth: true,
+            centerMode: true,
+            dots: true
+          }
+        },
+      ]
     }
 
     return (
       <Slider {...settings}>
         {this.state.listings.length ? (
           this.state.listings.map((listing) => {
-            return <ListingDesc listing={listing} key={listing.listingId} className="listing" />;
+            return <ListingDesc listing={listing} key={listing.listingId} className="listing" style={{position: 'absolute', display: 'inline-block'}} />;
         })
         ) : (
           <div>Loading...</div>

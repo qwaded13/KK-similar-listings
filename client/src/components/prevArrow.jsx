@@ -14,8 +14,6 @@ export default function PrevArrow(props) {
         ...style,
         height: '24px',
         width: '24px',
-        display: 'block',
-        position: 'absolute',
         fill: 'rgb(118, 118, 118)'
       }}
       onClick={onClick}

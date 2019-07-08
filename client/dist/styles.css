@@ -31,10 +31,10 @@ body {
 
 .saveButton {
   position: absolute;
-  display: inline-block;
+  /* display: inline-block; */
   background-color: transparent;
   top: 0;
-  right: 24px;
+  left: 280px;
 }
 
 /* Slider */
@@ -142,11 +142,13 @@ body {
 {
     pointer-events: none;
 }
-.slick-initialized .slick-slide
+*/
+.slick-slide
 {
-    display: inline-block;
     position: relative;
+    max-width: 370px;
 }
+/*
 .slick-loading .slick-slide
 {
     visibility: hidden;
@@ -159,9 +161,11 @@ body {
 
     border: 1px solid transparent;
 }
+
 .slick-arrow.slick-hidden {
     display: none;
 }
+
 
 @charset 'UTF-8';
 /* Slider */
@@ -272,7 +276,12 @@ body {
 {
     content: '<';
 }
+*/
 .slick-disabled {
     opacity: 0;
     pointer-events:none;
-} */ */
+}
+
+.slick-track {
+    min-width: 4440px
+}
