@@ -45,7 +45,7 @@ class ListingDesc extends React.Component {
         <span className="price">${this.props.listing.price} per night</span>
         <br />
         <span className="rating">
-          <ListingRating rating={this.props.listing.rating} />
+          <ListingRating rating={this.props.listing.rating} key={this.props.listingId}/>
           &nbsp;&nbsp;{this.props.listing.numberOfReviews}
         </span>
       </div>
