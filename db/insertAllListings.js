@@ -9,8 +9,8 @@ let listingId = 1;
 let insertAllListings = function() {
   let listingPromises = listingData.map((listing) => {
     listing.listingId = listingId++;
-    let imageId = Math.floor((Math.random() * 25) + 1);
-    listing.imageLink = `./test-images/test (${imageId}).jpg`;
+    let imageId = Math.floor(Math.random() * 25 + 1);
+    listing.imageLink = `https://s3.us-east-2.amazonaws.com/similar-listings-home-images/test(${imageId}).jpg`;
     return SimilarListing.findOneAndUpdate(
       { listingName: listing.listingName },
       listing,
