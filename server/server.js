@@ -5,7 +5,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const compression = require('compression');
 
-let db = require('../db/index');
+let { db, SimilarListing } = require('../db/index.js');
 // let insertAllListings = require('../db/insertAllListings');
 
 let app = express();
@@ -22,14 +22,13 @@ app.use('/:id(\\d+)', express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/similar-listings/:listingId', (req, res) => {
   let listingId = req.params.listingId;
-  db.find({})
-    .limit(12)
-    .exec()
-    .then((doc) => {
-      if (!doc) {
+  let sampleSize = listingId % 2 ? 7 : 13;
+  SimilarListing.aggregate([{ $sample: { size: sampleSize } }])
+    .then((sample) => {
+      if (!sample) {
         res.sendStatus(400);
       } else {
-        res.send(doc);
+        res.send(sample);
       }
     })
     .catch(() => {
