@@ -1,8 +1,7 @@
-let fs = require('fs');
 let Promise = require('bluebird');
 
 let { SimilarListing } = require('./index');
-let listingData = require('../test_data/MOCK_DATA.json');
+let listingData = require('./test_data/MOCK_DATA.json');
 
 let listingId = 1;
 

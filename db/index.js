@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-let dbURL = 'mongodb://localhost/similarlistings';
+let dbURL = 'mongodb://mongo/similarlistings';
 
 let db = mongoose.connect(dbURL, { useNewUrlParser: true }, (err) => {
   if (err) {
