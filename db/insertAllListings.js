@@ -1,7 +1,7 @@
 let fs = require('fs');
 let Promise = require('bluebird');
 
-let SimilarListing = require('./index');
+let { SimilarListing } = require('./index');
 let listingData = require('../test_data/MOCK_DATA.json');
 
 let listingId = 1;
@@ -10,7 +10,7 @@ let insertAllListings = function() {
   let listingPromises = listingData.map((listing) => {
     listing.listingId = listingId++;
     let imageId = Math.floor(Math.random() * 25 + 1);
-    listing.imageLink = `https://s3.us-east-2.amazonaws.com/similar-listings-home-images/test(${imageId}).jpg`;
+    listing.imageLink = `https://d39p4ziioa8xad.cloudfront.net/house(${imageId}).jpg`;
     return SimilarListing.findOneAndUpdate(
       { listingName: listing.listingName },
       listing,

@@ -13,7 +13,7 @@ class ListingDesc extends React.Component {
     return (
       <div className='container' style={{display: 'inline-block'}}>
         <div>
-          <ListingImg listingId={this.props.listing.listingId} />
+          <ListingImg listingId={this.props.listing.listingId} imageLink={this.props.listing.imageLink}/>
         </div>
         <span className="propertyType">
           {this.props.listing.propertyType.toUpperCase()} ·{' '}

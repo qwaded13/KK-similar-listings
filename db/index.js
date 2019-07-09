@@ -1,13 +1,12 @@
 let mongoose = require('mongoose');
 let dbURL = 'mongodb://localhost/similarlistings';
 
-mongoose.connect(dbURL, { useNewUrlParser: true });
-
-let db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  console.log('Connected to DB!');
+let db = mongoose.connect(dbURL, { useNewUrlParser: true }, (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('Connected to DB');
+  }
 });
 
 let Schema = mongoose.Schema;
@@ -31,4 +30,7 @@ let similarSchema = new Schema({
 
 let SimilarListing = mongoose.model('SimilarListing', similarSchema);
 
-module.exports = SimilarListing;
+module.exports = {
+  db,
+  SimilarListing
+};
