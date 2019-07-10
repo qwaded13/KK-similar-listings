@@ -2,6 +2,8 @@
 
 > A custom-built, responsive clone of the similar listings image carousel component from an AirBnB listing page served as a microservice.
 
+## Context
+
 For this project, I designed and developed a microservice and front-end clone of an AirBnB Listing Page's *Similar Sistings image carousel component*. The goal of this application was to develop a React clone of a widely used and stateful component, and to explore various front-end performance benchmarking and optimization techniques.
 
 In order to deploy more efficiently and frequently, I developed two dockerized services - one for the service application itself, and one to seed the database with mock data - and coordinated them with a mongoDB image using Docker-Compose. Below are instructions for getting the application running both locally and deployed.
