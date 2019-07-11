@@ -2,6 +2,8 @@
 
 > A custom-built, responsive clone of the similar listings image carousel component from an AirBnB listing page served as a microservice.
 
+[Link to Deployed Service](http://3.13.91.149/14/)
+
 ## Context
 
 For this project, I designed and developed a microservice and front-end clone of an AirBnB Listing Page's *Similar Sistings image carousel component*. The goal of this application was to develop a React clone of a widely used and stateful component, and to explore various front-end performance benchmarking and optimization techniques.
